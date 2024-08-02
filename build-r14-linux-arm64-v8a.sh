@@ -30,7 +30,7 @@ buildArch()  {
      fi
 
      echo "build arch ${ARCH}"
-     NDKARCH="-march=${ARCH} -mfloat-abi=softfp -Wl,--fix-cortex-a8"
+     NDKARCH="-march=${ARCH}"
      make clean
      make \
           HOST_CC="gcc -m64" \
