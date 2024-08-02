@@ -60,7 +60,7 @@ buildArch()  {
 }
 
 # armeabi-v7a x86 armeabi arm64-v8a
-for arch in armv8-a #armv5 armv6
+for arch in armv8-a
 do
      buildArch ${arch}
      if [ $? -ne 0 ]; then
