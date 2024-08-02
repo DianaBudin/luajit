@@ -14,8 +14,8 @@ fi
 tar_file=android.tar
 rm -f ./${tar_file}
 
-echo "build with r14-linux ..."
-NDK=$(pwd)/android-ndk-r14b
+echo "build with r12-linux ..."
+NDK=$(pwd)/android-ndk-r12b
 NDKBIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
 NDKABI=21
 NDKF="--sysroot $NDK/platforms/android-$NDKABI/arch-arm"
