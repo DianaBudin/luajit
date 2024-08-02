@@ -16,10 +16,10 @@ rm -f ./${tar_file}
 
 echo "build with r12-linux ..."
 NDK=$(pwd)/android-ndk-r12b
-NDKBIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
+NDKBIN=$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
 NDKABI=21
-NDKF="--sysroot $NDK/platforms/android-$NDKABI/arch-arm"
-NDKCROSS=$NDKBIN/arm-linux-androideabi-
+NDKF="--sysroot $NDK/platforms/android-$NDKABI/arch-arm64"
+NDKCROSS=$NDKBIN/aarch64-linux-android-
 
 buildArch()  {
      ARCH=${1}
@@ -33,7 +33,7 @@ buildArch()  {
      NDKARCH="-march=${ARCH} -mfloat-abi=softfp -Wl,--fix-cortex-a8"
      make clean
      make \
-          HOST_CC="gcc -m32" \
+          HOST_CC="gcc -m64" \
           CROSS=$NDKCROSS \
           TARGET_FLAGS="$NDKF $NDKARCH"
 

@@ -13,6 +13,6 @@ if [ ! -d "${ndk_dir}" ]; then
 fi
 echo "ndk_dir:${ndk_dir}"
 
-script=build-r14-linux.sh
+script=build-r14-linux-arm64-v8a.sh
 chmod +x ./${script}
 ./${script}
